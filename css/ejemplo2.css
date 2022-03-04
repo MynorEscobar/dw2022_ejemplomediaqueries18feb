@@ -1,0 +1,75 @@
+.contenedor{
+    display: grid;
+    grid-template-areas: 
+    'encabezado encabezado encabezado encabezado encabezado'
+    'menu menu menu menu menu'
+    'sesion contenido contenido contenido contenido'
+    'sesion sec1 sec2 sec3 sec4'
+    'pie pie pie pie pie';
+    grid-template-rows: 300px 50px 800px 200px 100px;
+}
+@media screen and (max-width:1400px) {
+    .contenedor{
+        grid-template-areas: 
+        'encabezado encabezado'
+        'menu menu'
+        'contenido contenido'
+        'sec1 sec2'
+        'sec3 sec4'
+        'sesion sesion'
+        'pie pie'
+        ;
+    }
+}
+@media screen and (max-width:780px){
+    .contenedor{
+        grid-template-areas:
+        'encabezado'
+        'menu'
+        'contenido'
+        'sec1'
+        'sec2'
+        'sec3'
+        'sec4'
+        'sesion'
+        'pie';
+        grid-template-rows: 100vh 10vh 90vh 50vh 50vh 50vh 50vh 80vh 20vh;
+    }
+    
+}
+header{
+    grid-area: encabezado;
+    background-color: green;
+}
+nav{
+    grid-area:menu;
+    background-color: yellow;
+}
+.sesion{
+    grid-area:sesion;
+    background-color: gray;
+}
+main{
+    grid-area: contenido;
+}
+.sec1{
+    grid-area: sec1;
+    background-color: orange;
+}
+.sec2{
+    grid-area: sec2;
+    background-color: skyblue;
+}
+.sec3{
+    grid-area: sec3;
+    background-color: black;
+}
+.sec4{
+    grid-area: sec4;
+    background-color: blue;
+}
+footer{
+    grid-area:pie;
+    background-color: blueviolet;
+}
+

@@ -1,0 +1,37 @@
+.contenedor{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 200px 400px;
+}
+.contenedor div{
+    border: 1px solid black;
+}
+
+@media only screen and (max-width: 1000px) {
+    .contenedor{
+        
+        grid-template-columns: 33.33% 33.33% 33.33%;
+        grid-template-rows: 200px 400px 200px;
+    }
+    .elemento1{
+        background-color: green;
+    }
+    .elemento2{
+        background-color: red;
+    }
+}
+@media only screen and (max-width:700px) {
+    .contenedor{
+        
+        grid-template-columns: 50% 50%;
+    }
+    .contenedor div{
+        height: 200px;
+    }
+    .elemento1{
+        border: 3px dased blue;
+        background-color: aqua;
+        border-radius: 20px;
+    }
+
+}
